@@ -40,7 +40,7 @@ public class Main {
                 throw new IllegalArgumentException("Количество данных не соответствует требуемому");
             }
 
-        String lastName = data[0];
+            String lastName = data[0];
             String firstName = data[1];
             String middleName = data[2];
             Date dateOfBirth = parseDate(data[3]);
@@ -52,25 +52,27 @@ public class Main {
             System.out.println("Имя: " + firstName);
             System.out.println("Отчество: " + middleName);
             System.out.println("Дата рождения: " + dateOfBirth);
-            System.out.println("Номер телефона" + phoneNumber);
+            System.out.println("Номер телефона: " + phoneNumber);
             System.out.println("Пол: " + gender);
-        }catch (IllegalArgumentException e) {
+        } catch (NumberFormatException e) {
+            System.out.println("Ошибка! Неверный формат номера телефона!");
+        } catch (IllegalArgumentException e) {
             System.out.println("Ошибка: " + e.getMessage());
-        }catch (ParseException e){
+        } catch (ParseException e) {
             System.out.println("Ошибка: Неверный формат даты");
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Ошибка! Недостаточно данных!");
         }
     }
 
-private static Date parseDate (String dataStr) throws ParseException {
+    private static Date parseDate(String dataStr) throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         return format.parse(dataStr);
-}
+    }
 
-private static String formatDate (Date date) {
+    private static String formatDate(Date date) {
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         return format.format(date);
 
+    }
 }
-        }
