@@ -8,7 +8,7 @@ public class Check {
         if (checkData.length == 10 && (checkData[2] == '.' && checkData[5] == '.')){
 
         } else {
-            throw new IncorrectValueException("Формат даты введен не правильно. Правильный формат ввода данных dd.mm.yyyy");
+            throw new IncorrectValueException("Invalid date format. Enter correct date: dd.mm.yyyy");
         }
     }
 
@@ -17,8 +17,8 @@ public class Check {
         try {
             long check = Long.parseLong(phoneNumber); // ошибка приведения вида
         } catch (IncorrectValueException e){
-            throw new IncorrectValueException("Формат телефона пользователя введен не правильно. " +
-                    "Правильный формат ввода данных 111222334455");
+            throw new IncorrectValueException("Invalid phonenumber format. " +
+                    "Enter correct format 111222334455");
         }
     }
 
@@ -30,13 +30,12 @@ public class Check {
                 char[] charArray = gender.toCharArray();
                 char convertedGender = charArray[0];
             } else {
-                throw new IncorrectValueException("Вы непрвльно указали пол !\n" +
-                        "Правильный формат ввода данных: m или f.");
+                throw new IncorrectValueException("Invalid gender !\n" +
+                        "Enter correct gender: m или f.");
             }
         } else {
-            throw new IncorrectValueException("Вы неправильно указали пол!\n" +
-                    "Пол указывается одним символом, если мужчина 'm', если женщина 'f'.\n" +
-                    "Правильный формат ввода данных, если вы мужчина - 'm', если женщина - 'f'.");
+            throw new IncorrectValueException("Invalid gender !\n" +
+                    "Gender is indicated by one character, if a man is 'm', if a woman is 'f'.\n");
         }
     }
 }
