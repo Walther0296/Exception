@@ -10,7 +10,7 @@ public class DataGet {
         System.out.println("Введите данные в порядке указанном ниже латиницейД:\n" +
                 " <Фамилия> <Имя> <Отчество> <Дата рождения> <Телефон> <Пол>\n " +
                 "Пример:\n" +
-                "Lvova Julia Anatolevna 01.01.1950 916784856 f");
+                "Саушкин Анатолий Андреевич 27.02.1996 89207345698 M");
         String inputData;
         inputData = scanner.nextLine();
         if (inputData.isEmpty()){
