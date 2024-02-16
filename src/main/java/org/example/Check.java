@@ -31,7 +31,7 @@ public class Check {
                 char convertedGender = charArray[0];
             } else {
                 throw new IncorrectValueException("Invalid gender !\n" +
-                        "Enter correct gender: m или f.");
+                        "Enter correct gender: m or f.");
             }
         } else {
             throw new IncorrectValueException("Invalid gender !\n" +
