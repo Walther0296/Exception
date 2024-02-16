@@ -28,7 +28,7 @@ public class DataGet {
 
 
         } else {
-            throw new ArrayCountElementException("Вы ввели не все данные или\n" +
+            throw new ArrayCountElementException("Введены не все данные или\n" +
                     "Вы пропустили пробел");
         }
 
