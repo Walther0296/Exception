@@ -25,7 +25,7 @@ public class DataWrite {
 
 
         } catch (IOException e){
-            throw new IOException("Произошла ошибка во время создания или записи файла");
+            throw new IOException("Error changing file");
         }
 
     }
